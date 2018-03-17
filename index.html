@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+	<meta charset="UTF-8">
+	<meta name="DESCRIPTION" content="cinema">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<style>
+		#footer {
+		position:fixed;
+		bottom:0;
+	}
+	</style>
+	<title>Cinema</title>
+	
+	<body>
+
+		<!-- Navigation -->
+		<nav class="w3-bar w3-black w3-xxlarge w3-center">
+			<a href="#filme" style="width:33.33%" class="w3-button w3-block w3-bar-item w3-button w3-jumbo w3-wide">Filme</a>
+			<a href="#program" style="width:33.33%" class="w3-button w3-block w3-bar-item w3-button w3-jumbo w3-wide">Program</a>
+			<a href="#contact" style="width:33.33%" class="w3-button w3-block w3-bar-item w3-button w3-jumbo w3-wide">Contact</a>
+		</nav>
+
+
+		<div class="w3-display-container mySlides">
+			<section class="w3-row-padding w3-center w3-light-black">
+			<a href="rezervare.php?movie=1">
+				<article class="w3-third">
+					<img src="images/img1.jpg" alt="Random Name" style="width:50%">
+					<p>Liga dreptatii (2017)</p>
+				</article>
+			</a>
+
+			<a href="rezervare.php?movie=2">
+				<article class="w3-third">
+					<img src="images/img2.jpg" alt="Random Name" style="width:50%">
+					<p>Wonder (2017)</p>
+				</article>
+			</a>
+			
+			<a href="rezervare.php?movie=3">
+				<article class="w3-third">
+					<img src="images/img3.jpg" alt="Random Name" style="width:50%">
+					<p>Mudbound (2017)</p>
+				</article>
+			</a>
+		</div>
+
+		<div class="w3-display-container mySlides">
+			<section class="w3-row-padding w3-center w3-light-black">
+			<a href="rezervare.php?movie=4">
+				<article class="w3-third">
+					<img src="images/img4.jpg" alt="Random Name" style="width:50%">
+					<p>Big Sonia (2016)</p>
+				</article>
+			</a>
+			<a href="rezervare.php?movie=5">
+				<article class="w3-third">
+					<img src="images/img5.jpg" alt="Random Name" style="width:50%">
+					<p>Almost Friends (2016)</p>
+				</article>
+			</a>
+			<a href="rezervare.php?movie=6">
+				<article class="w3-third">
+					<img src="images/img6.jpg" alt="Random Name" style="width:50%">
+					<p>Sweet Virginia (2017)</p>
+				</article>
+			</a>
+		</div>
+
+		<div class="w3-display-container mySlides">
+			<section class="w3-row-padding w3-center w3-light-black">
+			<a href="rezervare.php?movie=7">
+				<article class="w3-third">
+					<img src="images/img7.jpg" alt="Random Name" style="width:50%">
+					<p>Mr. Roosevelt (2017)</p>
+				</article>
+			</a>
+			<a href="rezervare.php?movie=8">
+				<article class="w3-third">
+					<img src="images/img8.jpg" alt="Random Name" style="width:50%">
+					<p>Mame bune si nebune 2 (2017)</p>
+				</article>
+			</a>
+			<a href="rezervare.php?movie=9">
+				<article class="w3-third">
+					<img src="images/img9.jpg" alt="Random Name" style="width:50%">
+					<p>Lady Bird (2017)</p>
+				</article>
+			</a>
+		</div>
+
+		<!-- poze fundal -->
+
+
+		<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+		<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  if (n > x.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block";  
+		}
+		</script>
+	</body>
+
+	<!-- Footer -->
+	<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+		<a href="#"><i class="fa fa-facebook-official"></i></a>
+		<a href="#"><i class="fa fa-pinterest-p"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-flickr"></i></a>
+		<a href="#"><i class="fa fa-linkedin"></i></a>
+	</footer>
+</html>
